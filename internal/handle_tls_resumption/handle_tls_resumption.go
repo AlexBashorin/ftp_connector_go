@@ -19,9 +19,6 @@ import (
 	"golang.org/x/crypto/pkcs12"
 )
 
-// Глобальный TLS session cache для переиспользования сессий
-// var globalTLSSessionCache = tls.NewLRUClientSessionCache(64)
-
 // Пути к сертификатам
 var certPath = "./certs/mycert.pfx"
 
