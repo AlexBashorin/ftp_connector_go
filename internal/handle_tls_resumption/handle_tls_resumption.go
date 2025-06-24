@@ -25,7 +25,7 @@ import (
 // Пути к сертификатам
 var certPath = "./certs/mycert.pfx"
 
-// NewFTPSDownloadHandler фабрика подключения к FTP и скачивание файла
+// NewFTPSDownloadHandler фабрика обработки POST запросов, подключения к FTP и скачивание файла
 func NewFTPSDownloadHandler(
 	sessionCache tls.ClientSessionCache,
 	pfxPass string,
@@ -84,10 +84,6 @@ func NewFTPSDownloadHandler(
 		json.NewEncoder(w).Encode(response)
 	}
 }
-
-// HandleFTPSDownload обрабатывает POST запросы для скачивания файлов через FTPS
-// func HandleFTPSDownload(w http.ResponseWriter, r *http.Request) {
-// }
 
 // validateRequest валидирует входящий запрос
 func validateRequest(req *models.FTPSRequest) error {
